@@ -4,24 +4,15 @@ Ce projet a pour but de retracer les différents lieux que j'ai pu visiter.
 
 ## Les raisons
 
-Avant de commencer la réalisation de ce projet me suis dis pourquoi faire cette outils alors que google maps permet de ce créer des cartes personnalisées.
-Mais je me suis dis que : 
- - se serait quand même top de pouvoir auto-héberger la base de données que j'ai pu visiter (pas une confiance absolu en google en terme de privacy)
- - sa s'inscrit dans ma démarche de me créer une plateforme global qui va me permettre de gérer ces différentes petites choses qui nous facilite la vie
+Avant de commencer la réalisation de ce projet me suis dits pourquoi faire cet outil alors que google maps permet de se créer des cartes personnalisées.
+Mais je me suis dit que : 
+ - Ce serait quand même top de pouvoir auto-héberger la base de données que j'ai pu visiter (pas une confiance absolue en google en matière de privacy)
+ - Ça s'inscrit dans ma démarche de me créer une plateforme globale qui va me permettre de gérer ses différentes petites choses qui nous facilitent la vie
 
 ## Usage
 
-Le but de cette outils est d'être utilisé pour choisir une destination de vacances, 
-ça permet de connaître en un coup d'oeil les villes ou les pays que l'on a pas encore eu l'occasion de visiter.
-
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Le but de cet outil est d'être utilisé pour choisir une destination de vacances, 
+ça permet de connaître en un coup d'oeil les villes ou les pays que l'on n'a pas encore eu l'occasion de visiter.
 
 ## Expanding the ESLint configuration
 
