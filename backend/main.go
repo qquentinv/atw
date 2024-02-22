@@ -22,6 +22,7 @@ var cities = []city{
 func main() {
 	router := gin.Default()
 	router.GET("/cities", getCities)
+	router.POST("/cities", postCities)
 
 	router.Run("localhost:8080")
 }
@@ -31,3 +32,16 @@ func getCities(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, cities)
 }
 
+// postCities adds a city from JSON received in the request body.
+func postCities(c *gin.Context) {
+	var newCity city
+
+	// Call BindJSON to bind the received JSON to newCities.
+	if err:= c.BindJSON(&newCity); err != nil {
+		return
+	}
+
+	// Add the new city to the slice.
+	cities = append(cities, newCity)
+	c.IndentedJSON(http.StatusCreated, newCity)
+}
