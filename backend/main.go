@@ -6,6 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// city represents data about a record city
 type city struct {
 	ID string `json:"id"`
 	Name string `json:"name"`
@@ -22,6 +23,7 @@ var cities = []city{
 func main() {
 	router := gin.Default()
 	router.GET("/cities", getCities)
+	router.GET("/cities/:id", getCityByID)
 	router.POST("/cities", postCities)
 
 	router.Run("localhost:8080")
@@ -44,4 +46,20 @@ func postCities(c *gin.Context) {
 	// Add the new city to the slice.
 	cities = append(cities, newCity)
 	c.IndentedJSON(http.StatusCreated, newCity)
+}
+
+// getCityByID locates the city whose ID value matches the id
+// parameter sent by the client, then returns that city as a response.
+func getCityByID(c *gin.Context) {
+	id := c.Param("id")
+
+	// Loop over the list of cities, looking for
+	// a city whose ID value matches the parameter.
+	for _, a := range cities {
+		if a.ID == id {
+			c.IndentedJSON(http.StatusOK, a)
+			return
+		}
+	}
+	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "album not found"})
 }
