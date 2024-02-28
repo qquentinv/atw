@@ -14,7 +14,7 @@ const ComponentResize = () => {
 function App() {
   return (
     <MapContainer
-      style={{ height: '98vh' }}
+      style={{ height: '100vh' }}
       center={[46.9908, 3.1628]}
       attributionControl={true}
       zoom={6}
