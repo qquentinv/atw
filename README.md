@@ -18,7 +18,7 @@ Le but de cet outil est d'être utilisé pour choisir une destination de vacance
 
 ![Architecture schema](./images/schema.svg)
 
-## Setup
+## Setup frontend
 To run this project, install it locally using yarn:
 
 ```
@@ -26,3 +26,7 @@ $ yarn install
 $ yarn dev
 ```
 
+## Setup backend
+```
+$ TODO
+```
