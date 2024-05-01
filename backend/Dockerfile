@@ -1,8 +1,13 @@
-FROM golang:1.16 as base
+FROM golang:1.22 as dev
 
-FROM base as dev
+RUN mkdir -p /go/src/backend
+WORKDIR /go/src/backend
 
-RUN curl -sSfL https://raw.githubusercontent.com/cosmtrek/air/master/install.sh | sh -s -- -b $(go env GOPATH)/bin
+COPY . /go/src/backend
 
-WORKDIR /opt/app/api
-CMD ["air"]
+RUN go get -d -v
+RUN go install -v
+
+EXPOSE 8080
+
+CMD ["/go/bin/backend"]

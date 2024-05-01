@@ -26,7 +26,7 @@ func main() {
 	router.GET("/cities/:id", getCityByID)
 	router.POST("/cities", postCities)
 
-	router.Run("localhost:8080")
+	router.Run(":8080") // listen and serve on port 8080
 }
 
 // getCities responds with the list of all cities as JSON
